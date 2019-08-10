@@ -1,0 +1,11 @@
+
+<div class="form-home col-md-4" *ngIf="sessionUser">
+        <img class="logo col-md-4" src="../../assets/img/olimpek.png" alt="olimpek" width="72" height="72">
+    <a [routerLink]="['/login']" class="btn btn-lg btn-secondary btn-block">Zaloguj</a>
+    <a [routerLink]="['/register']" class="btn btn-lg btn-secondary btn-block">Zarejestruj</a>
+</div>
+
+
+<div class="form-home col-md-4" *ngIf="!sessionUser">
+    przekierowanie na strone ...
+</div>

@@ -19,7 +19,8 @@ export class PostPointsComponent implements OnInit {
     this.angForm = this.fb.group({
       point_name: ['', Validators.required ],
       point_adress_fv: ['', Validators.required ],
-      point_adress: ['', Validators.required ]
+      point_adress: ['', Validators.required ],
+      point_goole_maps_adress: ['', Validators.required]
     });
   }
 

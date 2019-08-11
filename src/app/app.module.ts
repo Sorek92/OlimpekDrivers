@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// modules from me
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +17,9 @@ import { PostPointsComponent } from './points/post-points/post-points.component'
 import { PutPointsComponent } from './points/put-points/put-points.component';
 import { DeletePointsComponent } from './points/delete-points/delete-points.component';
 
+// services
+import { PointsService} from './points.service';
+// 
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,9 @@ import { DeletePointsComponent } from './points/delete-points/delete-points.comp
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PointsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

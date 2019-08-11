@@ -3,7 +3,7 @@
         <form [formGroup]="angForm" novalidate>
             <div class="form-group">
                 <label class="col-md-4">Nazwa punktu</label>
-                <input type="text" class="form-control" formControlName="point_name"/>
+                <input type="text" class="form-control" formControlName="point_name" #point_name/>
             </div>
             <div *ngIf="angForm.controls['point_name'].invalid && (angForm.controls['point_name'].dirty || angForm.controls['point_name'].touched)" class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_name'].errors.required">
@@ -13,7 +13,7 @@
 
             <div class="form-group">
                 <label class="col-md-4">Adres z faktury</label>
-                <input type="text" class="form-control" formControlName="point_adress_fv" />
+                <input type="text" class="form-control" formControlName="point_adress_fv" #point_adress_fv/>
             </div>
             <div *ngIf="angForm.controls['point_adress_fv'].invalid && (angForm.controls['point_adress_fv'].dirty || angForm.controls['point_adress_fv'].touched)" class="alert alert-danger" >
                 <div *ngIf="angForm.controls['point_adress_fv'].errors.required">
@@ -23,7 +23,7 @@
 
             <div class="form-group">
                 <label class="col-md-4">Adres prawdziwy</label>
-                <input type="text" class="form-control" formControlName="point_adress" />
+                <input type="text" class="form-control" formControlName="point_adress" #point_adress/>
             </div>
             <div *ngIf="angForm.controls['point_adress'].invalid && (angForm.controls['point_adress'].dirty || angForm.controls['point_adress'].touched)" class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_adress'].errors.required">
@@ -33,7 +33,7 @@
 
             <div class="form-group">
                 <label class="col-md-4">Link do google maps</label>
-                <input type="url" class="form-control" formControlName="point_goole_maps_adress"/>
+                <input type="url" class="form-control" formControlName="point_goole_maps_adress" #point_goole_maps_adress/>
             </div>
             <div *ngIf="angForm.controls['point_goole_maps_adress'].invalid && (angForm.controls['point_goole_maps_adress'].dirty || angForm.controls['point_goole_maps_adress'].touched) " class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_goole_maps_adress'].errors.required">
@@ -41,9 +41,14 @@
                 </div>
             </div>
 
+            <div class="form-group">
+            <input class="btn btn-success" type="submit" value="Dodaj" 
+            (click)="addPoints(point_name.value, point_adress_fv.value, point_adress.value, point_goole_maps_adress.value)" 
+            [disabled]="angForm.pristine || angForm.invalid"/>
 
-            <input class="btn btn-success" type="submit" value="Dodaj" [disabled]="angForm.pristine || angForm.invalid">
             <button class="btn btn-secondary cancel-button" [routerLink]="['/points']">Anuluj</button>
+
+            </div>
         </form>
     </div>
 </div>

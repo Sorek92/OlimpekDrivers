@@ -8,20 +8,20 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class PostPointsComponent implements OnInit {
 
-  // angForm: FormGroup;
+  angForm: FormGroup;
 
-  // constructor(private fb: FormBuilder) { 
-  //   this.createForm();
-  // }
+  constructor(private fb: FormBuilder) { 
+    this.createForm();
+  }
 
 
-  // createForm() {
-  //   this.angForm = this.fb.group({
-  //     point_name: ['', Validators.required ],
-  //     point_adress_fv: ['', Validators.required ],
-  //     point_adress: ['', Validators.required ]
-  //   });
-  // }
+  createForm() {
+    this.angForm = this.fb.group({
+      point_name: ['', Validators.required ],
+      point_adress_fv: ['', Validators.required ],
+      point_adress: ['', Validators.required ]
+    });
+  }
 
   ngOnInit() {
   }

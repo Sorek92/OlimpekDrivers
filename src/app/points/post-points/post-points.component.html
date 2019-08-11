@@ -3,13 +3,13 @@
         <form [formGroup]="angForm" novalidate>
             <div class="form-group">
                 <label class="col-md-4">Nazwa punktu</label>
-                <!-- <input type="text" class="form-control" formControlName="point_name"/> -->
+                <input type="text" class="form-control" formControlName="point_name"/>
             </div>
-            <!-- <div *ngIf="angForm.controls['point_name'].invalid && (angForm.controls['point_name'].dirty || angForm.controls['point_name'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['point_name'].invalid && (angForm.controls['point_name'].dirty || angForm.controls['point_name'].touched)" class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_name'].errors.required">
                     Point Name is required
                 </div>
-            </div> -->
+            </div>
 
             <div class="form-group">
                 <label class="col-md-4">Adres z faktury</label>

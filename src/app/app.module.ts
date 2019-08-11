@@ -7,6 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
+import { GetPointsComponent } from './points/get-points/get-points.component';
+import { PostPointsComponent } from './points/post-points/post-points.component';
+import { PutPointsComponent } from './points/put-points/put-points.component';
+import { DeletePointsComponent } from './points/delete-points/delete-points.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    NavComponent
+    NavComponent,
+    GetPointsComponent,
+    PostPointsComponent,
+    PutPointsComponent,
+    DeletePointsComponent
   ],
   imports: [
     BrowserModule,

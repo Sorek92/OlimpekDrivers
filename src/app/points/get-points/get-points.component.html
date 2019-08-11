@@ -1,0 +1,56 @@
+
+
+<table class="table table-striped table-light">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Edycja</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>
+              <button class="btn btn-warning" [routerLink]="['/points/edit/1']">Edytuj</button>
+              <button class="btn btn-danger" [routerLink]="['/points/delete']">Usuń</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>
+              <button class="btn btn-warning" [routerLink]="['/points/edit/2']">Edytuj</button>
+              <button class="btn btn-danger" [routerLink]="['/points/delete']">Usuń</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+              <button class="btn btn-warning" [routerLink]="['/points/edit/3']">Edytuj</button>
+              <button class="btn btn-danger" [routerLink]="['/points/delete']">Usuń</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+              <button class="btn btn-warning" [routerLink]="['/points/edit/4']">Edytuj</button>
+              <button class="btn btn-danger" [routerLink]="['/points/delete']">Usuń</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td colspan="2"><label class="" >Dodaj kolejny punkt</label></td>
+            <td><button class="btn btn-success" [routerLink]="['/points/create']">Dodaj</button></td>
+          </tr>
+        </tbody>
+
+      </table>

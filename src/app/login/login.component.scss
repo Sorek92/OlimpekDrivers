@@ -1,8 +1,12 @@
 .form-signin {
-    margin: 4rem auto;
+    margin: 0 auto;
     text-align: center !important;
 
-    img {
-        margin-bottom: 1rem;
+    input {
+        margin-top: 0.5rem;
+    }
+
+    button {
+        margin-top: 1rem;
     }
 }

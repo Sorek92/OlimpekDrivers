@@ -1,0 +1,37 @@
+
+.nav-header {
+    height: 150px;
+    .nav-brand {
+        top: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
+
+
+
+.form-nav {
+    margin: 1rem auto;
+    text-align: center !important;
+
+}
+
+.navigation {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      display: inline-block;
+      float: none;
+      > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+    }
+}

@@ -1,11 +1,13 @@
 
-<div class="form-home col-md-4" *ngIf="sessionUser">
-        <img class="logo col-md-4" src="../../assets/img/olimpek.png" alt="olimpek" width="72" height="72">
-    <a [routerLink]="['/login']" class="btn btn-lg btn-secondary btn-block">Zaloguj</a>
-    <a [routerLink]="['/register']" class="btn btn-lg btn-secondary btn-block">Zarejestruj</a>
+<div class="home" *ngIf="sessionUser">
+    <h4>Strona dla kierowców olimpeka</h4>
+    <p>Będą tu trasy i inne przydatne informacje dla kierowców</p>
+    <p>Aby przejść dalej zaloguj się.</p>
+    <p>Rejestracja tylko dla kierowców ze specjalnym pozwoleniem</p>
 </div>
 
+<div class="home" *ngIf="!sessionUser">
+        <h4>Strona dla kierowców olimpeka</h4>
+        <p>Będą tu trasy i inne przydatne informacje dla kierowców</p>
 
-<div class="form-home col-md-4" *ngIf="!sessionUser">
-    przekierowanie na strone ...
-</div>
+    </div>

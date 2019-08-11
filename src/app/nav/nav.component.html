@@ -1,0 +1,50 @@
+<header>
+    <div class="nav-header">
+        <a class="nav-brand"> 
+            <img  src="../../assets/img/olimpek.png" alt="olimpek" [routerLink]="['/']">
+        </a>
+    </div>
+
+
+    <div class="form-nav col-md-4" *ngIf="sessionUser">
+        <nav class="nav-bar">
+            <a [routerLink]="['/login']" class="btn btn-outline-secondary">
+                Zaloguj
+            </a>
+            <a [routerLink]="['/register']" class="btn btn-outline-secondary">
+                Zarejestruj
+            </a>
+        </nav>
+
+    </div>
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light" *ngIf="!sessionUser">
+        <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <div class="navigation">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']">
+                        Punkty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/register']">
+                        Drogi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/some']">
+                        Informacje
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+</header>

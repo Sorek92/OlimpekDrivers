@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-post-points',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPointsComponent implements OnInit {
 
-  constructor() { }
+  // angForm: FormGroup;
+
+  // constructor(private fb: FormBuilder) { 
+  //   this.createForm();
+  // }
+
+
+  // createForm() {
+  //   this.angForm = this.fb.group({
+  //     point_name: ['', Validators.required ],
+  //     point_adress_fv: ['', Validators.required ],
+  //     point_adress: ['', Validators.required ]
+  //   });
+  // }
 
   ngOnInit() {
   }

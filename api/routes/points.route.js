@@ -7,9 +7,9 @@ const pointsRoutes = express.Router();
 
 let Points = require('../models/Points');
 
-
 // define store route
-pointsRoutes.route('/create').post(function(req, res){
+pointsRoutes.route('/create').post((req, res) => {
+
     let points = new Points(req.body);
     points.save()
         .then( points => {
@@ -21,8 +21,8 @@ pointsRoutes.route('/create').post(function(req, res){
 });
 
 // define get data(index of listing) route
-pointsRoutes.route('/').get(function(req, res){
-    Points.find(function( err, points){
+pointsRoutes.route('/').get((req, res) => {
+    Points.find(( err, points) => {
         if(err){
             console.log(err);
         }else{
@@ -32,16 +32,16 @@ pointsRoutes.route('/').get(function(req, res){
 });
 
 // define edit route
-pointsRoutes.route('/edit/:id').get(function(req, res){
+pointsRoutes.route('/edit/:id').get((req, res) => {
     let id = req.params.id;
-    Points.findById(id, function(err, points){
+    Points.findById(id, (err, points) => {
         res.json(points);
     });
 });
 
 // define update route
-pointsRoutes.route('/update/:id').post(function(req, res){
-    Points.findById(req.params.id, function(err, next, points){
+pointsRoutes.route('/update/:id').post((req, res) => {
+    Points.findById(req.params.id, (err, next, points) => {
         if(!points)
             return next(new Error('could not load Document'));
         else{
@@ -61,8 +61,8 @@ pointsRoutes.route('/update/:id').post(function(req, res){
 });
 
 // define delete route
-pointsRoutes.route('/delete/:id').get(function(req, res){
-    Points.findByIdAndRemove({_id: req.params.id}, function(err, points){
+pointsRoutes.route('/delete/:id').get((req, res) => {
+    Points.findByIdAndRemove({_id: req.params.id}, (err, points) => {
         if(err) 
             res.json(err);
         else

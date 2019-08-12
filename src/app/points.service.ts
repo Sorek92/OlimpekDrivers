@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PointsService {
 
-  uri = 'http://localhost:4000/points';
+  uri = 'http://localhost:3000/points';
 
   constructor(private http: HttpClient) { }
 
@@ -18,11 +18,11 @@ export class PointsService {
         point_adress: point_adress,
         point_google_maps_adress: point_google_maps_adress
       };
-      console.log('----------')
+      console.log('----------');
       console.log(obj);
-      console.log('----------')
-
-      this.http.post('${this.uri}/create', obj)
+      console.log(this.uri);
+      console.log('----------');
+      this.http.post(this.uri+'/create', obj)
         .subscribe(res => console.log('Done'));
   }
 

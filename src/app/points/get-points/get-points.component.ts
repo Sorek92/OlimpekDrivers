@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Points from 'src/app/Points';
+import { PointsService } from '../../points.service';
 
 @Component({
   selector: 'app-get-points',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetPointsComponent implements OnInit {
 
-  constructor() { }
+  points : Points[];
+
+  constructor(private ps: PointsService) { }
 
   ngOnInit() {
+
+    this.ps
+      .getPoints()
+      .subscribe((data: Points[]) => {
+        this.points = data;
+      })
   }
 
 }

@@ -20,10 +20,15 @@ export class PointsService {
       };
       console.log('----------');
       console.log(obj);
-      console.log(this.uri);
       console.log('----------');
+
       this.http.post(this.uri+'/create', obj)
         .subscribe(res => console.log('Done'));
   }
+
+  getPoints(){
+    return this.http.get(this.uri);
+  }
+
 
 }

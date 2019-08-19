@@ -22,12 +22,14 @@ export class PostPointsComponent implements OnInit {
       point_name: ['', Validators.required ],
       point_adress_fv: ['', Validators.required ],
       point_adress: ['', Validators.required ],
-      point_goole_maps_adress: ['', Validators.required]
+      point_google_maps_adress: ['', Validators.required],
+      // point_time_open: ['', Validators.required],
+      // point_time_deliver_required: ['', Validators.required]
     });
   }
 
-  addPoints(point_name, point_adress_fv, point_adress, point_goole_maps_adress) {
-    this.bs.addPoints(point_name, point_adress_fv, point_adress, point_goole_maps_adress);
+  addPoints(point_name, point_adress_fv, point_adress, point_google_maps_adress, point_time_open, point_time_deliver_required) {
+    this.bs.addPoints(point_name, point_adress_fv, point_adress, point_google_maps_adress, point_time_open, point_time_deliver_required);
   }
 
   ngOnInit() {

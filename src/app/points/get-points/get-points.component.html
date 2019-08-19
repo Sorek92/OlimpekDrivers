@@ -7,6 +7,9 @@
             <th scope="col">Point name</th>
             <th scope="col">Point adress fv</th>
             <th scope="col">Point adress</th>
+            <th scope="col">link maps</th>
+            <th scope="col">time open</th>
+            <th scope="col">deliver time</th>
           </tr>
         </thead>
         <tbody>
@@ -15,6 +18,9 @@
             <td>{{point.point_name}}</td>
             <td>{{point.point_adress_fv}}</td>
             <td>{{point.point_adress}}</td>
+            <td>{{point.point_google_maps_adress}}</td>
+            <td>{{point.point_time_open}}</td>
+            <td>{{point.point_time_deliver_required}}</td>
             <td><a [routerLink]="['/edit',point._id]" class="btn btn-primary">Edytuj</a></td>
             <td><a [routerLink]="['/delete',point._id]" class="btn btn-danger">Usuń</a></td>
           </tr>

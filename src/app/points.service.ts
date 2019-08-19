@@ -10,13 +10,15 @@ export class PointsService {
 
   constructor(private http: HttpClient) { }
 
-  addPoints(point_name, point_adress_fv, point_adress, point_google_maps_adress){
+  addPoints(point_name, point_adress_fv, point_adress, point_google_maps_adress, point_time_open, point_time_deliver_required){
     
       const obj = {
         point_name: point_name,
         point_adress_fv: point_adress_fv,
         point_adress: point_adress,
-        point_google_maps_adress: point_google_maps_adress
+        point_google_maps_adress: point_google_maps_adress,
+        point_time_open: point_time_open,
+        point_time_deliver_required: point_time_deliver_required
       };
       console.log('----------');
       console.log(obj);

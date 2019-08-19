@@ -7,7 +7,7 @@
             </div>
             <div *ngIf="angForm.controls['point_name'].invalid && (angForm.controls['point_name'].dirty || angForm.controls['point_name'].touched)" class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_name'].errors.required">
-                    Point Name is required
+                    Nazwa Punktu jest wymagana
                 </div>
             </div>
 
@@ -17,7 +17,7 @@
             </div>
             <div *ngIf="angForm.controls['point_adress_fv'].invalid && (angForm.controls['point_adress_fv'].dirty || angForm.controls['point_adress_fv'].touched)" class="alert alert-danger" >
                 <div *ngIf="angForm.controls['point_adress_fv'].errors.required">
-                    Point adress from fv is required
+                    Adres z faktury jest wymagany
                 </div>
             </div>
 
@@ -27,23 +27,43 @@
             </div>
             <div *ngIf="angForm.controls['point_adress'].invalid && (angForm.controls['point_adress'].dirty || angForm.controls['point_adress'].touched)" class="alert alert-danger">
                 <div *ngIf="angForm.controls['point_adress'].errors.required">
-                    Point adresss is required
+                    Prawdziwy adres jest wymagany
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4">Link do google maps</label>
-                <input type="url" class="form-control" formControlName="point_goole_maps_adress" #point_goole_maps_adress/>
+                <input type="url" class="form-control" formControlName="point_google_maps_adress" #point_google_maps_adress/>
             </div>
-            <div *ngIf="angForm.controls['point_goole_maps_adress'].invalid && (angForm.controls['point_goole_maps_adress'].dirty || angForm.controls['point_goole_maps_adress'].touched) " class="alert alert-danger">
-                <div *ngIf="angForm.controls['point_goole_maps_adress'].errors.required">
-                    Point adress google maps is required
+            <div *ngIf="angForm.controls['point_google_maps_adress'].invalid && (angForm.controls['point_google_maps_adress'].dirty || angForm.controls['point_google_maps_adress'].touched) " class="alert alert-danger">
+                <div *ngIf="angForm.controls['point_google_maps_adress'].errors.required">
+                    Link do map google jest wymagany
+                </div>
+            </div>
+
+            <!-- <div class="form-group">
+                <label class="col-md-4">Godzina otwarcia</label>
+                <input type="url" class="form-control" formControlName="point_time_open" #point_time_open/>
+            </div>
+            <div *ngIf="angForm.controls['point_time_open'].invalid && (angForm.controls['point_time_open'].dirty || angForm.controls['point_time_open'].touched) " class="alert alert-danger">
+                <div *ngIf="angForm.controls['point_time_open'].errors.required">
+                    Godzina otwarcia jest wymagana
                 </div>
             </div>
 
             <div class="form-group">
+                <label class="col-md-4">Wymagany czas dostawy</label>
+                <input type="url" class="form-control" formControlName="point_time_deliver_required" #point_time_deliver_required/>
+            </div>
+            <div *ngIf="angForm.controls['point_time_deliver_required'].invalid && (angForm.controls['point_time_deliver_required'].dirty || angForm.controls['point_time_deliver_required'].touched) " class="alert alert-danger">
+                <div *ngIf="angForm.controls['point_time_deliver_required'].errors.required">
+                    Wymagany czas dostawy
+                </div>
+            </div> -->
+
+            <div class="form-group">
             <input class="btn btn-success" type="submit" value="Dodaj" 
-            (click)="addPoints(point_name.value, point_adress_fv.value, point_adress.value, point_goole_maps_adress.value)" 
+            (click)="addPoints(point_name.value, point_adress_fv.value, point_adress.value, point_google_maps_adress.value, point_time_open, point_time_deliver_required)" 
             [disabled]="angForm.pristine || angForm.invalid"/>
 
             <button class="btn btn-secondary cancel-button" [routerLink]="['/points']">Anuluj</button>

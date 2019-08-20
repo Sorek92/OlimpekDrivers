@@ -3,18 +3,18 @@
 <table class="table table-striped table-light">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Point name</th>
-            <th scope="col">Point adress fv</th>
-            <th scope="col">Point adress</th>
-            <th scope="col">link maps</th>
-            <th scope="col">time open</th>
-            <th scope="col">deliver time</th>
+            <th scope="col">Numer</th>
+            <th scope="col">Nazwa</th>
+            <th scope="col">Adres z faktury</th>
+            <th scope="col">Adres punktu</th>
+            <th scope="col">Link map goolge</th>
+            <th scope="col">Czas otwarcia</th>
+            <th scope="col">Czas dowozu</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let point of points">
-            <td>{{point.name}}</td>
+          <tr *ngFor="let point of points; let i = index" [attr.data-index]="i">
+            <td>{{i+1}}</td>
             <td>{{point.point_name}}</td>
             <td>{{point.point_adress_fv}}</td>
             <td>{{point.point_adress}}</td>

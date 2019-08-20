@@ -13,8 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
 import { GetPointsComponent } from './points/get-points/get-points.component';
-import { PostPointsComponent } from './points/post-points/post-points.component';
-import { PutPointsComponent } from './points/put-points/put-points.component';
+import { CreatePointsComponent } from './points/create-points/create-points.component';
+import { UpdatePointsComponent } from './points/update-points/update-points.component';
 import { DeletePointsComponent } from './points/delete-points/delete-points.component';
 
 // services
@@ -28,8 +28,8 @@ import { PointsService} from './points.service';
     RegisterComponent,
     NavComponent,
     GetPointsComponent,
-    PostPointsComponent,
-    PutPointsComponent,
+    CreatePointsComponent,
+    UpdatePointsComponent,
     DeletePointsComponent
   ],
   imports: [

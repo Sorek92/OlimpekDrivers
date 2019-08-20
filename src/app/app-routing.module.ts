@@ -10,8 +10,8 @@ import { RegisterComponent } from './register/register.component';
 
 // routes to admister points
 import { GetPointsComponent } from './points/get-points/get-points.component';
-import { PostPointsComponent } from './points/post-points/post-points.component';
-import { PutPointsComponent } from './points/put-points/put-points.component';
+import { CreatePointsComponent } from './points/create-points/create-points.component';
+import { UpdatePointsComponent } from './points/update-points/update-points.component';
 import { DeletePointsComponent } from './points/delete-points/delete-points.component';
 
 const routes: Routes = [
@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'points', component: GetPointsComponent },
-  { path: 'points/create', component: PostPointsComponent },
-  { path: 'points/edit/:id', component: PutPointsComponent },
+  { path: 'points/create', component: CreatePointsComponent },
+  { path: 'points/edit/:id', component: UpdatePointsComponent },
   { path: 'points/delete/:id', component: DeletePointsComponent },
   { path: '**', redirectTo: ''}
 ];

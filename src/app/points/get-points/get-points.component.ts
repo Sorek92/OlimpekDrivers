@@ -10,6 +10,7 @@ import { PointsService } from '../../points.service';
 export class GetPointsComponent implements OnInit {
 
   points : Points[];
+  tableOff: Boolean;
 
   constructor(private ps: PointsService) { }
 
@@ -19,7 +20,33 @@ export class GetPointsComponent implements OnInit {
       .getPoints()
       .subscribe((data: Points[]) => {
         this.points = data;
+
+        //show table if points exists
+        if(!this.points){
+          this.tableOff = true;
+        }else{
+          this.tableOff = false;
+        }
       })
+  }
+
+
+  collapse(i){
+    console.log(i);
+    var x = document.getElementById("collapse"+i);
+
+    var q = x.classList.contains('show');
+    console.log(q);
+    if(q === false){
+      x.classList.add('show');
+      x.parentElement.style.backgroundColor = "#0095B3";
+    }else{
+      x.classList.remove('show');
+      x.parentElement.style.backgroundColor = "";
+    }
+    console.log(x);
+    
+
   }
 
 }

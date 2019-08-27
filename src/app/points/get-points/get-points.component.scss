@@ -1,3 +1,72 @@
-button {
-    margin-right: 10px;
+@import '../../pallets_colors';
+
+.points-lists {
+    
+    margin-top: 1rem;
+    
+    ul {
+        padding: 0;
+        li{
+            cursor: pointer;
+            .point_id {
+                float: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+            }
+
+            .point_name {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+            }
+
+            &:hover {
+                background-color: $pallet_caribbean_sea;
+            }
+
+            .card-header {
+                padding-top: 1rem;
+
+                .point_adress {
+                    float: left;
+                    border-left: 3px solid $pallet_apple_green;
+                    border-bottom: 1px solid $pallet_apple_green;
+                    border-bottom-right-radius: 20px;
+                    .card-title {
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                        margin-top: 1rem;
+                    }
+                    
+                }
+            }
+
+            .card-body {
+                .point_adress {
+                    float: left;
+                    
+                    .card-title {
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                        margin-top: 1rem;
+                    }
+                    
+                }
+            }
+
+            .card-footer {
+                a:first-child{
+                    float: left;
+                }
+                a:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+    
 }
+
+
